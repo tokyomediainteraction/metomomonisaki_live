@@ -420,12 +420,12 @@
 					"presentation_rect" : [ 178.0, 81.0, 88.0, 232.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 6.0,
 							"parameter_shortname" : "output",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "mc.live.gain~[5]",
-							"parameter_mmax" : 6.0
+							"parameter_longname" : "mc.live.gain~[5]"
 						}
 
 					}
@@ -539,8 +539,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.0, 655.0, 101.0, 22.0 ],
-					"text" : "send~ outmodule"
+					"patching_rect" : [ 24.0, 655.0, 120.0, 22.0 ],
+					"text" : "mc.send~ outmodule"
 				}
 
 			}
@@ -728,7 +728,7 @@
 													"maxclass" : "inlet",
 													"numinlets" : 0,
 													"numoutlets" : 1,
-													"outlettype" : [ "multichannelsignal" ],
+													"outlettype" : [ "signal" ],
 													"patching_rect" : [ 50.0, 100.0, 30.0, 30.0 ]
 												}
 
@@ -808,7 +808,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "multichannelsignal" ],
+									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 22.0, 19.0, 30.0, 30.0 ]
 								}
 
@@ -933,7 +933,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "multichannelsignal" ],
+					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 24.0, 153.0, 90.0, 237.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 24.0, 76.0, 90.0, 237.0 ],
@@ -1040,7 +1040,29 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-9" : [ "live.dial[10]", "reverb_send", 0 ],
+			"obj-2::obj-5" : [ "live.dial", "input_balance", 0 ],
+			"obj-14" : [ "mc.live.gain~[5]", "output", 0 ],
+			"obj-5" : [ "live.dial[11]", "live.dial[1]", 0 ],
+			"obj-6" : [ "live.dial[12]", "live.dial[1]", 0 ],
+			"obj-2::obj-20" : [ "mc.live.gain~", "input", 0 ],
+			"parameterbanks" : 			{
+
+			}
+
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "module_input_selector.maxpat",
+				"bootpath" : "~/Desktop/metomiminosaki_live",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

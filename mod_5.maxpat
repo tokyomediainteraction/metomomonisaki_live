@@ -352,8 +352,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 318.0, 269.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 318.0, 269.0, 62.0, 22.0 ],
+					"text" : "r knob_37"
 				}
 
 			}
@@ -364,8 +364,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 220.0, 307.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 220.0, 307.0, 62.0, 22.0 ],
+					"text" : "r knob_29"
 				}
 
 			}
@@ -376,8 +376,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 122.0, 307.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 122.0, 307.0, 62.0, 22.0 ],
+					"text" : "r knob_21"
 				}
 
 			}
@@ -400,8 +400,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 57.0, 440.0, 91.0, 22.0 ],
-					"text" : "r fader_number"
+					"patching_rect" : [ 57.0, 440.0, 57.0, 22.0 ],
+					"text" : "r fader_5"
 				}
 
 			}
@@ -424,7 +424,7 @@
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "mc.live.gain~[1]",
+							"parameter_longname" : "mc.live.gain~[5]",
 							"parameter_mmax" : 6.0
 						}
 
@@ -441,8 +441,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 95.0, 117.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 95.0, 117.0, 62.0, 22.0 ],
+					"text" : "r knob_13"
 				}
 
 			}
@@ -453,8 +453,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 89.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 24.0, 89.0, 55.0, 22.0 ],
+					"text" : "r knob_5"
 				}
 
 			}
@@ -474,7 +474,7 @@
 							"parameter_shortname" : "reverb_send",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[5]"
+							"parameter_longname" : "live.dial[10]"
 						}
 
 					}
@@ -499,7 +499,7 @@
 							"parameter_shortname" : "live.dial[1]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[2]"
+							"parameter_longname" : "live.dial[12]"
 						}
 
 					}
@@ -524,7 +524,7 @@
 							"parameter_shortname" : "live.dial[1]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[1]"
+							"parameter_longname" : "live.dial[11]"
 						}
 
 					}
@@ -1040,29 +1040,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-2::obj-20" : [ "mc.live.gain~", "input", 0 ],
-			"obj-14" : [ "mc.live.gain~[1]", "output", 0 ],
-			"obj-9" : [ "live.dial[5]", "reverb_send", 0 ],
-			"obj-5" : [ "live.dial[1]", "live.dial[1]", 0 ],
-			"obj-2::obj-5" : [ "live.dial", "input_balance", 0 ],
-			"obj-6" : [ "live.dial[2]", "live.dial[1]", 0 ],
-			"parameterbanks" : 			{
-
-			}
-
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "module_input_selector.maxpat",
-				"bootpath" : "~/Desktop/metomiminosaki_live",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

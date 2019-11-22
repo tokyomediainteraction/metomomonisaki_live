@@ -352,8 +352,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 318.0, 269.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 318.0, 269.0, 62.0, 22.0 ],
+					"text" : "r knob_36"
 				}
 
 			}
@@ -364,8 +364,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 220.0, 307.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 220.0, 307.0, 62.0, 22.0 ],
+					"text" : "r knob_28"
 				}
 
 			}
@@ -376,8 +376,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 122.0, 307.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 122.0, 307.0, 62.0, 22.0 ],
+					"text" : "r knob_20"
 				}
 
 			}
@@ -401,7 +401,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 57.0, 440.0, 91.0, 22.0 ],
-					"text" : "r fader_number"
+					"text" : "r fader_4"
 				}
 
 			}
@@ -441,8 +441,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 95.0, 117.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 95.0, 117.0, 62.0, 22.0 ],
+					"text" : "r knob_12"
 				}
 
 			}
@@ -453,8 +453,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 89.0, 89.0, 22.0 ],
-					"text" : "r knob_number"
+					"patching_rect" : [ 24.0, 89.0, 55.0, 22.0 ],
+					"text" : "r knob_4"
 				}
 
 			}

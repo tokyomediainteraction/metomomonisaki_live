@@ -420,12 +420,12 @@
 					"presentation_rect" : [ 178.0, 81.0, 88.0, 232.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 6.0,
-							"parameter_shortname" : "output",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "mc.live.gain~[5]"
+							"parameter_longname" : "mc.live.gain~[5]",
+							"parameter_mmax" : 6.0,
+							"parameter_shortname" : "output"
 						}
 
 					}
@@ -471,10 +471,10 @@
 					"presentation_rect" : [ 101.0, 265.0, 75.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "reverb_send",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[10]"
+							"parameter_longname" : "live.dial[10]",
+							"parameter_shortname" : "reverb_send"
 						}
 
 					}
@@ -496,10 +496,10 @@
 					"presentation_rect" : [ 118.0, 125.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "live.dial[1]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[12]"
+							"parameter_longname" : "live.dial[12]",
+							"parameter_shortname" : "live.dial[1]"
 						}
 
 					}
@@ -521,10 +521,10 @@
 					"presentation_rect" : [ 118.0, 76.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "live.dial[1]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[11]"
+							"parameter_longname" : "live.dial[11]",
+							"parameter_shortname" : "live.dial[1]"
 						}
 
 					}
@@ -643,7 +643,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 3,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "multichannelsignal" ],
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
@@ -683,6 +683,18 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-2",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "multichannelsignal" ],
+													"patching_rect" : [ 50.0, 477.0, 65.0, 22.0 ],
+													"text" : "mc.dup~ 4"
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"comment" : "",
 													"id" : "obj-1",
@@ -734,7 +746,21 @@
 
 											}
  ],
-										"lines" : [  ]
+										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"source" : [ "obj-15", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-14", 0 ],
+													"source" : [ "obj-2", 0 ]
+												}
+
+											}
+ ]
 									}
 ,
 									"patching_rect" : [ 22.0, 76.0, 147.0, 22.0 ],
@@ -1042,12 +1068,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-9" : [ "live.dial[10]", "reverb_send", 0 ],
 			"obj-2::obj-5" : [ "live.dial", "input_balance", 0 ],
+			"obj-2::obj-20" : [ "mc.live.gain~", "input", 0 ],
+			"obj-9" : [ "live.dial[10]", "reverb_send", 0 ],
 			"obj-14" : [ "mc.live.gain~[5]", "output", 0 ],
 			"obj-5" : [ "live.dial[11]", "live.dial[1]", 0 ],
 			"obj-6" : [ "live.dial[12]", "live.dial[1]", 0 ],
-			"obj-2::obj-20" : [ "mc.live.gain~", "input", 0 ],
 			"parameterbanks" : 			{
 
 			}

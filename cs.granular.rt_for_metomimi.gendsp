@@ -1,0 +1,338 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 1,
+			"revision" : 1,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "dsp.gen",
+		"rect" : [ 44.0, 79.0, 1594.0, 1051.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 12.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Ricty Diminished Regular",
+		"gridonopen" : 2,
+		"gridsize" : [ 10.0, 10.0 ],
+		"gridsnaponopen" : 2,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "myTemplate",
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-32",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1420.0, 20.0, 134.0, 46.0 ],
+					"text" : "in 11 @comment feedback @min 0 @max 1 @default 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1280.0, 20.0, 128.0, 46.0 ],
+					"text" : "in 10 @comment \"pitch blur amount\" @min 0 @default 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 974.111111111111086, 20.0, 140.0, 46.0 ],
+					"text" : "in 8 @comment \"stereo spread\" @min 0 @max 1 @default 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 820.666666666666629, 20.0, 140.0, 46.0 ],
+					"text" : "in 7 @comment \"grain gain max\" @min 0 @max 1 @default 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 667.222222222222172, 20.0, 140.0, 46.0 ],
+					"text" : "in 6 @comment \"grain gain min\" @min 0 @max 1 @default 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1130.0, 20.0, 152.0, 46.0 ],
+					"text" : "in 9 @comment \"position blur amount\" @min 0 @default 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 523.777777777777828, 20.0, 136.222222222222172, 46.0 ],
+					"text" : "in 5 @comment \"grain length max\" @min 1 @default 100"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 380.0, 20.0, 134.0, 46.0 ],
+					"text" : "in 4 @comment \"grain length min\" @min 1 @default 100"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 230.0, 20.0, 134.0, 46.0 ],
+					"text" : "in 3 @comment \"grain number\" @min 0 @max samplerate"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 657.222222222222172, 110.0, 150.0, 57.0 ],
+					"text" : "まだ微妙な点\n＊グレイン数減らした時にスケジューラが強制的に止まる→クリップ"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 611.0, 1000.0, 158.0, 21.0 ],
+					"text" : "out 2 @comment \"output R\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 20.0, 1000.0, 158.0, 21.0 ],
+					"text" : "out 1 @comment \"output L\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "/*\r\nreal-time granulator\r\n\r\nabout INFO\n0ch = flag\n1ch = grain counter\n2ch = grain size\n3ch = grain gain\n4ch = grain pan L\n5ch = grain pan R\n7ch = grain pos\r\n*/\r\n\r\nDelay BUF_L(samplerate*40, feedback = 1);\r\nDelay BUF_R(samplerate*40, feedback = 1);\r\nData INFO(samplerate, 9);\r\nBuffer PITCH(\"pitch\");\r\nBuffer WINDOW(\"window\");\r\n\r\n\r\n\r\ng_num\t\t= ceil(in3);\r\ng_size\t\t= mstosamps(in4);\r\ng_trig\t\t= change(train(g_size/g_num)) == 1;\r\n\r\n\r\n// GENERATOR\r\nif(g_trig) {\r\n\tindex\t= -1;\r\n\tdetect\t= -1;\r\n\t\r\n\twhile(detect!=0 && index<g_num) {\r\n\t\tindex  += 1;\r\n\t\tdetect\t= peek(INFO, index, 0);\r\n\t}\r\n\t\r\n\tpoke(INFO, 1, index, 0);\t\t// flag\r\n\t//poke(INFO, 0, index, 1);\t\t// counter\r\n\t\r\n\t// size\r\n\tsize = scale(noise(), -1, 1, g_size, mstosamps(in5));\r\n\tpoke(INFO, size, index, 2);\r\n\t\r\n\t// gain\r\n\tgain = sqrt(scale(noise(), -1, 1, in6, in7));\r\n\tpoke(INFO, gain, index, 3);\r\n\t\r\n\t// grain pan\r\n\tpval = 0.5 + noise()*0.5*in8;\r\n\tpL\t = pow((1-pval), 0.75);\r\n\tpR\t = pow(pval, 0.75);\r\n\tpoke(INFO, pL, index, 4);\r\n\tpoke(INFO, pR, index, 5);\r\n\t\r\n\t// position\r\n\tblur = mstosamps(in9) * abs(noise());\r\n\tpos\t = (size/g_num)*index + blur;\r\n\tpoke(INFO, pos, index, 6);\r\n\t\r\n\t// pitch\r\n\t//pitch_index = \r\n\t\r\n\tpitch_v = peek(PITCH, floor(abs(noise())*(dim(PITCH))));\r\n\tpitch_freq = (((1 - pitch_v) + noise()*in10)*samplerate)/size;\r\n\tpoke(INFO, pitch_freq, index, 7);\r\n\tpoke(INFO, 0, index, 8);\r\n\t\r\n}\r\n\r\n\r\nOUT_L = 0;\r\nOUT_R = 0;\r\n\r\n\r\n// SCHEDULER\r\nfor(i=0; i<g_num; i+=1) {\r\n\t\r\n\tflag = peek(INFO, i, 0) == 1;\r\n\t\r\n\tif(flag) {\r\n\t\tcont = peek(INFO, i, 1);\r\n\t\tsize = peek(INFO, i, 2);\r\n\t\tgain = peek(INFO, i, 3);\r\n\t\t//g_pn = peek(INFO, i, 4);\r\n\t\tpL\t = peek(INFO, i, 4);\r\n\t\tpR\t = peek(INFO, i, 5);\r\n\t\tpos\t = peek(INFO, i, 6);\r\n\t\tpitch_freq\t= peek(INFO, i, 7);\r\n\t\tpitch_phase\t= wrap(peek(INFO, i, 8), 0, 1);\r\n\t\t\r\n\t\tsigL = BUF_L.read(pos + pitch_phase*size);\r\n\t\tsigR = BUF_R.read(pos + pitch_phase*size);\r\n\t\t\r\n\t\t//w = 0.5 - 0.5*cos(twopi*cont/(size-1));\r\n\t\tw = peek(WINDOW, cont/(size-1)*dim(WINDOW), 0);\r\n\t\t\r\n\t \tOUT_L += sigL * w * gain * pL;\r\n\t\tOUT_R += sigR * w * gain * pR;\r\n\t\t\r\n\t\tcont += 1;\r\n\t\tpoke(INFO, cont, i, 1);\r\n\t\tpoke(INFO, pitch_freq/samplerate + pitch_phase, i, 8);\r\n\t\t\r\n\t\tif(cont >= size-1) {\r\n\t\t\tpoke(INFO, 0, i, 0);\r\n\t\t\tpoke(INFO, 0, i, 1);\r\n\t\t\tpoke(INFO, 0, i, 2);\r\n\t\t\tpoke(INFO, 0, i, 3);\r\n\t\t\tpoke(INFO, 0, i, 4);\r\n\t\t\tpoke(INFO, 0, i, 5);\r\n\t\t\tpoke(INFO, 0, i, 6);\r\n\t\t\tpoke(INFO, 0, i, 7);\r\n\t\t}\r\n\t}\r\n}\r\n\r\nout1 = OUT_L;\r\nout2 = OUT_R;\r\n\r\nBUF_L.write(in1 + dcblock(OUT_L*in11));\r\nBUF_R.write(in2 + dcblock(OUT_R*in11));",
+					"fontface" : 0,
+					"fontname" : "<Monospaced>",
+					"fontsize" : 12.0,
+					"id" : "obj-9",
+					"maxclass" : "codebox",
+					"numinlets" : 11,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 20.0, 100.0, 610.0, 880.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 120.0, 20.0, 96.555555555555543, 34.0 ],
+					"text" : "in 2 @comment \"input R\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 20.0, 20.0, 92.0, 34.0 ],
+					"text" : "in 1 @comment \"input L\""
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 2 ],
+					"midpoints" : [ 239.5, 87.0, 147.699999999999989, 87.0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 9 ],
+					"midpoints" : [ 1289.5, 87.0, 561.399999999999977, 87.0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 7 ],
+					"midpoints" : [ 983.611111111111086, 87.0, 443.199999999999989, 87.0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 3 ],
+					"midpoints" : [ 389.5, 87.0, 206.800000000000011, 87.0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 4 ],
+					"midpoints" : [ 533.277777777777828, 87.0, 265.899999999999977, 87.0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 10 ],
+					"midpoints" : [ 1429.5, 87.0, 620.5, 87.0 ],
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 8 ],
+					"midpoints" : [ 1139.5, 87.0, 502.300000000000011, 87.0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 5 ],
+					"midpoints" : [ 676.722222222222172, 87.0, 325.0, 87.0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 6 ],
+					"midpoints" : [ 830.166666666666629, 87.0, 384.100000000000023, 87.0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"midpoints" : [ 29.5, 57.0, 29.5, 57.0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"midpoints" : [ 129.5, 87.0, 88.599999999999994, 87.0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+ ]
+	}
+
+}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 484.0, 177.0, 996.0, 932.0 ],
+		"rect" : [ 894.0, 105.0, 996.0, 932.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -341,7 +341,7 @@
 					"patching_rect" : [ 24.0, 27.0, 222.0, 40.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 24.0, 27.0, 222.0, 40.0 ],
-					"text" : "EFFECT NAME"
+					"text" : "SHIMMER"
 				}
 
 			}
@@ -420,12 +420,12 @@
 					"presentation_rect" : [ 178.0, 81.0, 88.0, 232.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_shortname" : "output",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
 							"parameter_longname" : "mc.live.gain~[5]",
-							"parameter_mmax" : 6.0,
-							"parameter_shortname" : "output"
+							"parameter_mmax" : 6.0
 						}
 
 					}
@@ -471,10 +471,10 @@
 					"presentation_rect" : [ 101.0, 265.0, 75.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_shortname" : "reverb_send",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[10]",
-							"parameter_shortname" : "reverb_send"
+							"parameter_longname" : "live.dial[10]"
 						}
 
 					}
@@ -496,10 +496,10 @@
 					"presentation_rect" : [ 118.0, 125.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_shortname" : "live.dial[1]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[12]",
-							"parameter_shortname" : "live.dial[1]"
+							"parameter_longname" : "live.dial[12]"
 						}
 
 					}
@@ -521,10 +521,10 @@
 					"presentation_rect" : [ 118.0, 76.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_shortname" : "live.dial[1]",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.dial[11]",
-							"parameter_shortname" : "live.dial[1]"
+							"parameter_longname" : "live.dial[11]"
 						}
 
 					}
@@ -562,7 +562,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 363.0, 207.0, 1253.0, 848.0 ],
+						"rect" : [ 364.0, 461.0, 1253.0, 848.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -589,6 +589,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-8",
@@ -655,7 +656,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+										"rect" : [ 1048.0, 154.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -682,6 +683,7 @@
 										"tags" : "",
 										"style" : "",
 										"subpatcher_template" : "",
+										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-2",
@@ -1068,11 +1070,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-2::obj-5" : [ "live.dial", "input_balance", 0 ],
-			"obj-2::obj-20" : [ "mc.live.gain~", "input", 0 ],
-			"obj-9" : [ "live.dial[10]", "reverb_send", 0 ],
 			"obj-14" : [ "mc.live.gain~[5]", "output", 0 ],
 			"obj-5" : [ "live.dial[11]", "live.dial[1]", 0 ],
+			"obj-9" : [ "live.dial[10]", "reverb_send", 0 ],
+			"obj-2::obj-20" : [ "mc.live.gain~", "input", 0 ],
+			"obj-2::obj-5" : [ "live.dial", "input_balance", 0 ],
 			"obj-6" : [ "live.dial[12]", "live.dial[1]", 0 ],
 			"parameterbanks" : 			{
 
@@ -1082,7 +1084,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "module_input_selector.maxpat",
-				"bootpath" : "~/Desktop/metomiminosaki_live",
+				"bootpath" : "~/tmi/metomomonisaki_live",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

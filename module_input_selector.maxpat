@@ -153,12 +153,12 @@
 					"presentation_rect" : [ 18.0, 92.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 6.0,
 							"parameter_shortname" : "input",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "mc.live.gain~",
-							"parameter_mmax" : 6.0
+							"parameter_longname" : "mc.live.gain~"
 						}
 
 					}
@@ -271,8 +271,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 28.0, 27.0, 103.0, 22.0 ],
-					"text" : "mc.receive~ input"
+					"patching_rect" : [ 28.0, 27.0, 113.0, 22.0 ],
+					"text" : "mc.receive~ input 2"
 				}
 
 			}

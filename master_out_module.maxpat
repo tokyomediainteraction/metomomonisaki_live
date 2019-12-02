@@ -39,11 +39,137 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 399.5, 388.0, 40.0, 22.0 ],
+					"text" : "mc.*~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-53",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 421.5, 451.0, 94.0, 22.0 ],
+					"text" : "mc.send~ tapes"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"maxclass" : "live.dial",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 487.5, 582.0, 41.0, 48.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 279.0, 4.0, 41.0, 48.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_mmin" : -70.0,
+							"parameter_longname" : "live.dial[69]",
+							"parameter_mmax" : 0.0,
+							"parameter_shortname" : "ATTENUATOR",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 0
+						}
+
+					}
+,
+					"varname" : "live.dial"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 633.5, 180.0, 107.0, 22.0 ],
+					"text" : "scale 0 127 -70. 0."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 633.5, 140.0, 57.0, 22.0 ],
+					"text" : "r fader_6"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"lastchannelcount" : 4,
+					"maxclass" : "mc.live.gain~",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 516.0, 218.0, 97.0, 139.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 10.0, 76.0, 80.0, 139.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_mmin" : -70.0,
+							"parameter_longname" : "mc.live.gain~[19]",
+							"parameter_mmax" : 6.0,
+							"parameter_shortname" : "MASTER TAPE",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "mc.live.gain~[3]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "multichannelsignal", "multichannelsignal", "multichannelsignal" ],
+					"patching_rect" : [ 516.0, 68.0, 173.0, 22.0 ],
+					"text" : "mc.separate~ 4 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 516.0, 24.0, 173.0, 22.0 ],
+					"text" : "mc.receive~ outmodule_tape 8"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 393.0, 451.0, 107.0, 22.0 ],
+					"patching_rect" : [ 593.0, 451.0, 107.0, 22.0 ],
 					"text" : "mc.send~ realtime"
 				}
 
@@ -98,181 +224,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-30",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patcher" : 					{
-						"fileversion" : 1,
-						"appversion" : 						{
-							"major" : 8,
-							"minor" : 1,
-							"revision" : 1,
-							"architecture" : "x64",
-							"modernui" : 1
-						}
-,
-						"classnamespace" : "box",
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
-						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"boxes" : [ 							{
-								"box" : 								{
-									"id" : "obj-24",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 50.0, 203.0, 46.0, 22.0 ],
-									"text" : "dbtoa~"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-23",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 132.0, 52.0, 22.0 ],
-									"text" : "$1 1000"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-19",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 2,
-									"outlettype" : [ "signal", "bang" ],
-									"patching_rect" : [ 50.0, 168.0, 34.0, 22.0 ],
-									"text" : "line~"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-18",
-									"maxclass" : "newobj",
-									"numinlets" : 6,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 100.0, 107.0, 22.0 ],
-									"text" : "scale 0 127 -70. 0."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"comment" : "",
-									"id" : "obj-27",
-									"index" : 1,
-									"maxclass" : "inlet",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"comment" : "",
-									"id" : "obj-29",
-									"index" : 1,
-									"maxclass" : "outlet",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 285.0, 30.0, 30.0 ]
-								}
-
-							}
- ],
-						"lines" : [ 							{
-								"patchline" : 								{
-									"destination" : [ "obj-23", 0 ],
-									"source" : [ "obj-18", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"source" : [ "obj-19", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-19", 0 ],
-									"source" : [ "obj-23", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-29", 0 ],
-									"source" : [ "obj-24", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-18", 0 ],
-									"source" : [ "obj-27", 0 ]
-								}
-
-							}
- ]
-					}
-,
-					"patching_rect" : [ 357.5, 375.0, 64.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
-					}
-,
-					"text" : "p setValue"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 357.5, 342.0, 62.0, 22.0 ],
+					"patching_rect" : [ 487.5, 516.0, 62.0, 22.0 ],
 					"text" : "r knob_40"
 				}
 
@@ -419,15 +376,15 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 37.0, 218.0, 97.0, 139.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 10.0, 76.0, 80.0, 139.0 ],
+					"presentation_rect" : [ 92.0, 76.0, 80.0, 139.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmin" : -70.0,
+							"parameter_longname" : "mc.live.gain~[13]",
 							"parameter_mmax" : 6.0,
 							"parameter_shortname" : "MASTER DRY",
 							"parameter_type" : 0,
-							"parameter_unitstyle" : 4,
-							"parameter_mmin" : -70.0,
-							"parameter_longname" : "mc.live.gain~[13]"
+							"parameter_unitstyle" : 4
 						}
 
 					}
@@ -447,15 +404,15 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 129.0, 218.0, 97.0, 139.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 92.0, 76.0, 80.0, 139.0 ],
+					"presentation_rect" : [ 174.0, 76.0, 80.0, 139.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmin" : -70.0,
+							"parameter_longname" : "mc.live.gain~[15]",
 							"parameter_mmax" : 6.0,
 							"parameter_shortname" : "MASTER REVERB",
 							"parameter_type" : 0,
-							"parameter_unitstyle" : 4,
-							"parameter_mmin" : -70.0,
-							"parameter_longname" : "mc.live.gain~[15]"
+							"parameter_unitstyle" : 4
 						}
 
 					}
@@ -1825,7 +1782,7 @@
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+B....................................vO....9Tj644iysO3O.........3C...vO.B..+.H..3ikeQlObSwm+.........fO....+.H..7Cf..vOTbGZ9jN9s7yEd2H.....9....7Cf..vO.B..9.bTd3i26XvOV7cg.....3C...vO.B..+.H..7iIrpjOv2UJ+HB3RB....fO....+.H..7Cf..vOMUts9r+t79C.........9....7Cf..vO.B..9XAKE+CHQc7O.7mj.....3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H..7Cf..vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
+							"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+RTYlEVcrQGHSUFczklamA................vO.B..976jK3i+UbwOG3qJ9HYRk7CP..vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H.......vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
 						}
 ,
 						"snapshotlist" : 						{
@@ -1838,7 +1795,7 @@
 									"origin" : "FabFilter Pro-Q 2.vstinfo",
 									"type" : "VST",
 									"subtype" : "MidiEffect",
-									"embed" : 0,
+									"embed" : 1,
 									"snapshot" : 									{
 										"pluginname" : "FabFilter Pro-Q 2.vstinfo",
 										"plugindisplayname" : "FabFilter Pro-Q 2",
@@ -1847,7 +1804,7 @@
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+B....................................vO....9Tj644iysO3O.........3C...vO.B..+.H..3ikeQlObSwm+.........fO....+.H..7Cf..vOTbGZ9jN9s7yEd2H.....9....7Cf..vO.B..9.bTd3i26XvOV7cg.....3C...vO.B..+.H..7iIrpjOv2UJ+HB3RB....fO....+.H..7Cf..vOMUts9r+t79C.........9....7Cf..vO.B..9XAKE+CHQc7O.7mj.....3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H..7Cf..vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
+										"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+RTYlEVcrQGHSUFczklamA................vO.B..976jK3i+UbwOG3qJ9HYRk7CP..vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H.......vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
 									}
 ,
 									"fileref" : 									{
@@ -1856,6 +1813,24 @@
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
 										"snapshotfileid" : "7c3716bc1eb9a89fbffd615ad5e34a30"
+									}
+
+								}
+, 								{
+									"filetype" : "C74Snapshot",
+									"version" : 2,
+									"minorversion" : 0,
+									"name" : "FabFilter Pro-Q 2",
+									"origin" : "FabFilter Pro-Q 2.vstinfo",
+									"type" : "VST",
+									"subtype" : "MidiEffect",
+									"embed" : 0,
+									"fileref" : 									{
+										"name" : "FabFilter Pro-Q 2",
+										"filename" : "FabFilter Pro-Q 2_20191129.maxsnap",
+										"filepath" : "~/Documents/Max 8/Snapshots",
+										"filepos" : -1,
+										"snapshotfileid" : "529fca485f0ad60f5e059d58551f5a03"
 									}
 
 								}
@@ -1918,7 +1893,7 @@
 							"version" : 1,
 							"isbank" : 0,
 							"isbase64" : 1,
-							"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+B....................................vO....9Tj644iysO3O.........3C...vO.B..+.H..3ikeQlObSwm+.........fO....+.H..7Cf..vOTbGZ9jN9s7yEd2H.....9....7Cf..vO.B..9.bTd3i26XvOV7cg.....3C...vO.B..+.H..7iIrpjOv2UJ+HB3RB....fO....+.H..7Cf..vOMUts9r+t79C.........9....7Cf..vO.B..9XAKE+CHQc7O.7mj.....3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H..7Cf..vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
+							"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+RTYlEVcrQGHSUFczklamA................vO.B..976jK3i+UbwOG3qJ9HYRk7CP..vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H.......vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
 						}
 ,
 						"snapshotlist" : 						{
@@ -1931,7 +1906,7 @@
 									"origin" : "FabFilter Pro-Q 2.vstinfo",
 									"type" : "VST",
 									"subtype" : "MidiEffect",
-									"embed" : 0,
+									"embed" : 1,
 									"snapshot" : 									{
 										"pluginname" : "FabFilter Pro-Q 2.vstinfo",
 										"plugindisplayname" : "FabFilter Pro-Q 2",
@@ -1940,9 +1915,27 @@
 										"version" : 1,
 										"isbank" : 0,
 										"isbase64" : 1,
-										"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+B....................................vO....9Tj644iysO3O.........3C...vO.B..+.H..3ikeQlObSwm+.........fO....+.H..7Cf..vOTbGZ9jN9s7yEd2H.....9....7Cf..vO.B..9.bTd3i26XvOV7cg.....3C...vO.B..+.H..7iIrpjOv2UJ+HB3RB....fO....+.H..7Cf..vOMUts9r+t79C.........9....7Cf..vO.B..9XAKE+CHQc7O.7mj.....3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H..7Cf..vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
+										"blob" : "820.CMlaKA....fQ3MzZ....AXTTx.G...P.....+RTYlEVcrQGHSUFczklamA................vO.B..976jK3i+UbwOG3qJ9HYRk7CP..vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf..vO.B..+LwOM9C...vO.........3C...vO.B..+.H..7yD+z3O....+.........fO....+.H..7Cf..vOS7Si+....7C.........9....7Cf........9.H.......vO....+....7C...................vO.B..+.H.......vO....9nppq9C...vO.A.......7Cf..vOpn5p..........vO.........."
 									}
 ,
+									"fileref" : 									{
+										"name" : "FabFilter Pro-Q 2",
+										"filename" : "FabFilter Pro-Q 2_20191129.maxsnap",
+										"filepath" : "~/Documents/Max 8/Snapshots",
+										"filepos" : -1,
+										"snapshotfileid" : "529fca485f0ad60f5e059d58551f5a03"
+									}
+
+								}
+, 								{
+									"filetype" : "C74Snapshot",
+									"version" : 2,
+									"minorversion" : 0,
+									"name" : "FabFilter Pro-Q 2",
+									"origin" : "FabFilter Pro-Q 2.vstinfo",
+									"type" : "VST",
+									"subtype" : "MidiEffect",
+									"embed" : 0,
 									"fileref" : 									{
 										"name" : "FabFilter Pro-Q 2",
 										"filename" : "FabFilter Pro-Q 2.maxsnap",
@@ -1974,15 +1967,15 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 37.0, 644.0, 48.0, 136.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 229.0, 52.0, 48.0, 163.0 ],
+					"presentation_rect" : [ 279.0, 52.0, 48.0, 163.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmin" : -70.0,
+							"parameter_longname" : "mc.live.gain~[14]",
 							"parameter_mmax" : 6.0,
 							"parameter_shortname" : "MASTER OUT",
 							"parameter_type" : 0,
-							"parameter_unitstyle" : 4,
-							"parameter_mmin" : -70.0,
-							"parameter_longname" : "mc.live.gain~[14]"
+							"parameter_unitstyle" : 4
 						}
 
 					}
@@ -2735,6 +2728,54 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"id" : "obj-44",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 487.0, 719.0, 46.0, 22.0 ],
+					"text" : "dbtoa~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 487.0, 648.0, 52.0, 22.0 ],
+					"text" : "$1 1000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "bang" ],
+					"patching_rect" : [ 487.0, 684.0, 34.0, 22.0 ],
+					"text" : "line~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-49",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 487.5, 550.0, 107.0, 22.0 ],
+					"text" : "scale 0 127 -70. 0."
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -2824,6 +2865,27 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-24", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 1 ],
 					"source" : [ "obj-25", 0 ]
 				}
@@ -2831,8 +2893,33 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-18", 0 ],
+					"order" : 0,
 					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"order" : 1,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"order" : 1,
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-53", 0 ],
+					"order" : 0,
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
@@ -2840,6 +2927,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-47", 0 ],
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"midpoints" : [ 643.0, 209.5, 525.5, 209.5 ],
+					"source" : [ "obj-29", 0 ]
 				}
 
 			}
@@ -2867,7 +2962,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 1 ],
+					"destination" : [ "obj-42", 0 ],
 					"source" : [ "obj-30", 0 ]
 				}
 
@@ -2884,6 +2979,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
 					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-33", 0 ]
 				}
 
 			}
@@ -2941,6 +3043,36 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-30", 1 ],
+					"order" : 0,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 1 ],
+					"order" : 1,
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-44", 0 ],
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-47", 0 ]
 				}
@@ -2962,9 +3094,23 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-52", 0 ],
+					"source" : [ "obj-49", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"midpoints" : [ 300.0, 209.5, 46.5, 209.5 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-52", 0 ]
 				}
 
 			}
@@ -2977,23 +3123,14 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"order" : 0,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
-					"order" : 1,
 					"source" : [ "obj-7", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
+					"destination" : [ "obj-49", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
